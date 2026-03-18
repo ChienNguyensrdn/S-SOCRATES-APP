@@ -23,6 +23,12 @@ class _MicGlowState extends State<MicGlow>
   }
 
   @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
 
     return AnimatedBuilder(
@@ -39,13 +45,13 @@ class _MicGlowState extends State<MicGlow>
             shape: BoxShape.circle,
             gradient: const RadialGradient(
               colors: [
-                Color(0xFFB388FF),
-                Color(0xFF6A1B9A),
+                Color(0xFF6EE7B7),
+                Color(0xFF15803D),
               ],
             ),
             boxShadow: [
               BoxShadow(
-                color: Colors.purpleAccent.withOpacity(0.6),
+                color: const Color(0xFF34D399).withValues(alpha: 0.62),
                 blurRadius: 40,
                 spreadRadius: 20,
               )

@@ -1,25 +1,5 @@
-// import 'package:flutter/material.dart';
-// import 'speech_screen.dart';
-
-// void main() {
-//   runApp(const VoiceApp());
-// }
-
-// class VoiceApp extends StatelessWidget {
-//   const VoiceApp({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return const MaterialApp(
-//       debugShowCheckedModeBanner: false,
-//       home: SpeechScreen(),
-//     );
-//   }
-// }
-
-
 import 'package:flutter/material.dart';
-import 'chat_screen.dart';
+import 'home_screen.dart';
 
 void main() {
   runApp(const SSocratesApp());
@@ -33,12 +13,15 @@ class SSocratesApp extends StatelessWidget {
     return MaterialApp(
       title: 'S-Socrates AI',
       debugShowCheckedModeBanner: false,
-
       theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color(0xFF16A34A),
+          brightness: Brightness.dark,
+        ),
+        useMaterial3: true,
+        fontFamily: 'Segoe UI',
       ),
-
-      home: const ChatScreen(),
+      home: const HomeScreen(),
     );
   }
 }
